@@ -1,0 +1,5 @@
+interface:
+  display_name: 연구용 에이전트 지침 정비
+  short_description: 연구용 에이전트 지침 정비 · 연구 업무 지원
+  default_prompt: $writing-for-agents 연구실에서 반복 사용하는 에이전트 지침을 검토하고, 자료 확인 조건, 산출물과
+    완료 기준이 명확하게 정리되도록 수정해줘.

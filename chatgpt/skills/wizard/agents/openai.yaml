@@ -1,0 +1,4 @@
+interface:
+  display_name: 연구 도구의 수동 설정 안내
+  short_description: 연구 도구의 수동 설정 안내 · 연구 업무 지원
+  default_prompt: $wizard 연구 도구 설정에서 사람이 직접 해야 하는 로그인과 인증 단계만 안내하는 Bash 스크립트를 만들어줘.

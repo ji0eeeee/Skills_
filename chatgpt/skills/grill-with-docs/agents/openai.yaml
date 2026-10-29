@@ -1,0 +1,7 @@
+interface:
+  display_name: 연구 설계·결정 기록
+  short_description: 연구 설계·결정 기록 · 연구 업무 지원
+  default_prompt: $grill-with-docs 이 연구계획을 검토하면서 합의한 용어와 방법 선택의 이유를 CONTEXT.md와 설계
+    결정 문서에 기록해줘.
+policy:
+  allow_implicit_invocation: false

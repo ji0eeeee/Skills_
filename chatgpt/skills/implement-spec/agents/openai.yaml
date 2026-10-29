@@ -1,0 +1,7 @@
+interface:
+  display_name: 여러 분석 작업 통합
+  short_description: 여러 분석 작업 통합 · 연구 업무 지원
+  default_prompt: $implement-spec 이 분석 명세의 작업들을 의존관계에 맞춰 구현하고 하나의 PR로 통합해줘. 각 작업의
+    검증 결과를 함께 정리해줘.
+policy:
+  allow_implicit_invocation: false

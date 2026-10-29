@@ -1,0 +1,5 @@
+interface:
+  display_name: TypeScript 테스트 자료 정비
+  short_description: TypeScript 테스트 자료 정비 · 연구 업무 지원
+  default_prompt: $migrate-to-shoehorn 이 TypeScript 분석 도구의 테스트에서 as 단언을 검토하고, 부분 테스트
+    자료를 shoehorn으로 표현해줘.

@@ -1,0 +1,7 @@
+interface:
+  display_name: 장기 연구의 결정 지도
+  short_description: 장기 연구의 결정 지도 · 연구 업무 지원
+  default_prompt: $wayfinder 이 장기 연구에서 먼저 결정해야 할 연구 질문, 방법, 자료와 검증 조건을 선후관계가 보이는 결정
+    지도로 정리해줘.
+policy:
+  allow_implicit_invocation: false

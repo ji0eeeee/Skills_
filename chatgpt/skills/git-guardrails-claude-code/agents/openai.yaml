@@ -1,0 +1,5 @@
+interface:
+  display_name: Claude Code의 Git 보호 설정
+  short_description: Claude Code의 Git 보호 설정 · 연구 업무 지원
+  default_prompt: $git-guardrails-claude-code 이 연구 프로젝트의 Claude Code 환경에 위험한 Git 명령을
+    차단하는 훅을 설정해줘.

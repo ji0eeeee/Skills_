@@ -1,0 +1,5 @@
+interface:
+  display_name: 분석 코드의 가정·변경 검증
+  short_description: 분석 코드의 가정·변경 검증 · 연구 업무 지원
+  default_prompt: $karpathy-guidelines 이 분석 코드의 가정과 모호한 요구사항을 먼저 설명하고, 필요한 범위만 수정한
+    뒤 결과가 검증 기준에 맞는지 확인해줘.

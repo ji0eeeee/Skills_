@@ -1,0 +1,7 @@
+interface:
+  display_name: TypeScript 분석 도구의 접근 규칙
+  short_description: TypeScript 분석 도구의 접근 규칙 · 연구 업무 지원
+  default_prompt: $setup-ts-deep-modules 이 TypeScript 분석 도구의 패키지 공개 진입점과 내부 접근 규칙을
+    설정하고 규칙이 실제로 동작하는지 확인해줘.
+policy:
+  allow_implicit_invocation: false

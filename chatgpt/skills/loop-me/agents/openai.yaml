@@ -1,0 +1,6 @@
+interface:
+  display_name: 반복 연구 절차 명세
+  short_description: 반복 연구 절차 명세 · 연구 업무 지원
+  default_prompt: $loop-me 우리 연구실의 문헌 수집, 데이터 전처리, 분석, 보고 과정을 확인하고 반복 가능한 작업 절차로 정리해줘.
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,7 @@
+interface:
+  display_name: 분석 절차 구현
+  short_description: 분석 절차 구현 · 연구 업무 지원
+  default_prompt: $implement 합의된 분석 명세를 코드로 구현해줘. 입력, 단위, 제외 기준과 출력이 명세에 맞는지 확인하고
+    변경 내역을 기록해줘.
+policy:
+  allow_implicit_invocation: false

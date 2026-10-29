@@ -1,0 +1,5 @@
+interface:
+  display_name: 분석 방법의 예비 구현
+  short_description: 분석 방법의 예비 구현 · 연구 업무 지원
+  default_prompt: $prototype 이 분석 방법의 실행 가능성을 확인할 작은 예비 구현을 만들어줘. 실험적 구현에서 확인한 점과
+    본 분석에 아직 적용하지 않은 점을 구분해줘.

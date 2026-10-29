@@ -1,0 +1,5 @@
+interface:
+  display_name: 분석 오류의 재현·원인 확인
+  short_description: 분석 오류의 재현·원인 확인 · 연구 업무 지원
+  default_prompt: $diagnosing-bugs 이 분석 오류를 최소 사례로 재현하고 입력, 단위 변환과 계산 경로를 확인해 원인을
+    좁혀줘. 수정 후 같은 오류를 잡는 회귀 테스트를 남겨줘.

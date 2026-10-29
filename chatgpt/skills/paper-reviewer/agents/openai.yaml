@@ -1,0 +1,4 @@
+interface:
+  display_name: "원고 재심사·이전 지적 해결 추적"
+  short_description: "심사위원별 지적을 기록하고 수정본에서 해결·부분해결·미해결을 재평가"
+  default_prompt: "$paper-reviewer revise papers/my-paper/versions/v2.pdf --of v1 이전 심사 지적이 실제 수정 근거로 해결됐는지 검토하고 남은 쟁점을 한국어로 정리해줘."

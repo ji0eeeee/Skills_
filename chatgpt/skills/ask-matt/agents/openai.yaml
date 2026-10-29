@@ -1,0 +1,6 @@
+interface:
+  display_name: 연구 단계별 도구 선택
+  short_description: 연구 단계별 도구 선택 · 연구 업무 지원
+  default_prompt: $ask-matt 현재 연구의 진행 단계와 필요한 산출물을 확인하고, 어떤 스킬을 어떤 순서로 사용할지 제안해줘.
+policy:
+  allow_implicit_invocation: false

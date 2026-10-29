@@ -1,0 +1,7 @@
+interface:
+  display_name: Claude Code 작업 인계
+  short_description: Claude Code 작업 인계 · 연구 업무 지원
+  default_prompt: $claude-handoff 현재 분석의 목적, 완료한 작업과 남은 작업을 정리해 Claude Code의 새 백그라운드
+    에이전트에 인계해줘.
+policy:
+  allow_implicit_invocation: false

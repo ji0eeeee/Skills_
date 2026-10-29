@@ -1,0 +1,5 @@
+interface:
+  display_name: 공동 분석 코드 충돌 해결
+  short_description: 공동 분석 코드 충돌 해결 · 연구 업무 지원
+  default_prompt: $resolving-merge-conflicts 공동연구 분석 코드의 병합 충돌을 양쪽 변경의 목적에 맞게 해결하고
+    계산 의미가 보존되는지 확인해줘.

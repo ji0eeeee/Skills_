@@ -1,0 +1,5 @@
+interface:
+  display_name: AI Hero 교육 실습 구조
+  short_description: AI Hero 교육 실습 구조 · 연구 업무 지원
+  default_prompt: $scaffold-exercises AI Hero 교육 과정 규칙을 사용하는 프로젝트에서 연구 분석 교육용 실습 문제와
+    해설 폴더를 만들어줘.

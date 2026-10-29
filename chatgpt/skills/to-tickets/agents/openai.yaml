@@ -1,0 +1,7 @@
+interface:
+  display_name: 공동연구 작업 분담 명세
+  short_description: 공동연구 작업 분담 명세 · 연구 업무 지원
+  default_prompt: $to-tickets 이 연구 분석 명세를 독립적으로 완료할 작업으로 나누고, 각 작업의 산출물, 완료 기준과 선행
+    작업을 명시해줘.
+policy:
+  allow_implicit_invocation: false

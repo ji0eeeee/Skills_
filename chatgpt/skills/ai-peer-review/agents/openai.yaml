@@ -1,0 +1,4 @@
+interface:
+  display_name: "서로 다른 모델의 독립 심사·쟁점 비교"
+  short_description: "여러 제공자 모델의 원고 심사를 보존하고 공통·개별 지적과 종합평 비교"
+  default_prompt: "$ai-peer-review 이 원고에 사용할 모델과 API 준비 상태를 확인하고, 모델별 독립 심사와 공통·개별 지적 비교를 진행해줘. 사용한 실제 모델과 실패한 요청을 명시해줘."

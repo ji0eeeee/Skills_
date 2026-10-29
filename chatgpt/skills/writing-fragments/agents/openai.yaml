@@ -1,0 +1,7 @@
+interface:
+  display_name: 논문의 핵심 주장·근거 수집
+  short_description: 논문의 핵심 주장·근거 수집 · 연구 업무 지원
+  default_prompt: $writing-fragments 이 연구 결과로 논문에서 주장할 수 있는 내용과 뒷받침하는 관찰을 질문하면서 수집해줘.
+    근거가 있는 주장과 추가 검증이 필요한 주장을 구분해줘.
+policy:
+  allow_implicit_invocation: false

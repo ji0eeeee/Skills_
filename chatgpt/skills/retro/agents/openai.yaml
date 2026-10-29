@@ -1,0 +1,6 @@
+interface:
+  display_name: 연구 작업 회고·절차 개선
+  short_description: 연구 작업 회고·절차 개선 · 연구 업무 지원
+  default_prompt: $retro 이번 분석 작업에서 반복된 문제와 검증 누락을 회고하고 다음 작업을 위한 환경과 지침 개선점을 제안해줘.
+policy:
+  allow_implicit_invocation: false

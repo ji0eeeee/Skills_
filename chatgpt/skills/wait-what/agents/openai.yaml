@@ -1,0 +1,7 @@
+interface:
+  display_name: 연구 맥락에 맞춘 재설명
+  short_description: 연구 맥락에 맞춘 재설명 · 연구 업무 지원
+  default_prompt: $wait-what 방금 설명을 연구 목적과 변수 정의부터 다시 설명해줘. 동료 연구자가 이해할 수 있도록 전문 용어의
+    의미를 먼저 밝혀줘.
+policy:
+  allow_implicit_invocation: false

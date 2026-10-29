@@ -1,0 +1,7 @@
+interface:
+  display_name: 공동연구 요청·오류 접수 정리
+  short_description: 공동연구 요청·오류 접수 정리 · 연구 업무 지원
+  default_prompt: $triage 공동연구자가 접수한 분석 오류와 개선 요청을 분류하고, 재현 자료와 필요한 확인 사항을 갖춘 작업 요청으로
+    정리해줘.
+policy:
+  allow_implicit_invocation: false

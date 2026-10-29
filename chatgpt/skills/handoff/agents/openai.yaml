@@ -1,0 +1,7 @@
+interface:
+  display_name: 연구 업무 인수인계
+  short_description: 연구 업무 인수인계 · 연구 업무 지원
+  default_prompt: $handoff 다른 연구자가 이 분석을 이어갈 수 있도록 연구 목적, 입력 자료, 현재 결과, 결정 이유, 미해결
+    사항과 다음 작업을 인수인계 문서로 정리해줘.
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: 연구 변수·개념 정의 정리
+  short_description: 연구 변수·개념 정의 정리 · 연구 업무 지원
+  default_prompt: $domain-modeling 이 분석 프로젝트에서 사용하는 변수와 개념의 의미를 정리하고, 혼용된 용어와 중복된
+    이름을 찾아 정의를 기록해줘.

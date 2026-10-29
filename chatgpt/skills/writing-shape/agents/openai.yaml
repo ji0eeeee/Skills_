@@ -1,0 +1,7 @@
+interface:
+  display_name: 논문 원고의 논증 구조
+  short_description: 논문 원고의 논증 구조 · 연구 업무 지원
+  default_prompt: $writing-shape 이 결과와 소재 파일을 읽고 독자가 이해할 순서로 논문 원고를 문단별로 구성해줘. 원자료를
+    보존하고 각 문단의 주장과 근거를 확인해줘.
+policy:
+  allow_implicit_invocation: false

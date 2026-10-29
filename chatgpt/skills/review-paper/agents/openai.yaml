@@ -1,0 +1,4 @@
+interface:
+  display_name: "목표 저널 적합성·분야별 사전 심사"
+  short_description: "저널 요구와 최근 논문을 조사하고 방법·통계·윤리까지 사전 심사"
+  default_prompt: "$review-paper 이 원고를 지정한 목표 저널에 맞춰 검토해줘. 저널 근거와 원고 위치를 연결하고 핵심 수정사항을 한국어로 정리해줘."

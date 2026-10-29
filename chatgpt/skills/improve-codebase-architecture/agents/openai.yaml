@@ -1,0 +1,7 @@
+interface:
+  display_name: 분석 코드 구조 개선 후보
+  short_description: 분석 코드 구조 개선 후보 · 연구 업무 지원
+  default_prompt: $improve-codebase-architecture 우리 분석 코드에서 검증이 어렵거나 수정이 여러 파일에 퍼지는
+    지점을 찾아 구조 개선 후보와 이유를 HTML 보고서로 보여줘.
+policy:
+  allow_implicit_invocation: false

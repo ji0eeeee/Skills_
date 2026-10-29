@@ -1,0 +1,4 @@
+interface:
+  display_name: 연구 의사결정 검토
+  short_description: 연구 의사결정 검토 · 연구 업무 지원
+  default_prompt: $grilling 이 연구 방법의 대안과 선택 기준을 확인하고, 결론에 영향을 주는 미정 사항부터 질문해줘.

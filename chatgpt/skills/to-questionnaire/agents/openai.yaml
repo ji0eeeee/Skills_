@@ -1,0 +1,7 @@
+interface:
+  display_name: 공동연구자 확인 질문지
+  short_description: 공동연구자 확인 질문지 · 연구 업무 지원
+  default_prompt: $to-questionnaire 공동연구자에게 확인해야 할 측정 조건, 자료 처리 기준과 해석상의 쟁점을 질문지로
+    정리해줘. 받는 사람이 제공할 정보와 결정할 사항을 구분해줘.
+policy:
+  allow_implicit_invocation: false
