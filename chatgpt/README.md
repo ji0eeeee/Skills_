@@ -62,7 +62,7 @@ Research와 GPT Researcher의 결과는 **문헌 조사 초안과 근거 후보*
 
 ## 연구 업무별 스킬
 
-이 폴더의 61개 스킬을 연구 업무별로 소개합니다. Visualize Data, Presentations처럼 플러그인으로 표시한 항목은 이 폴더에 없고 따로 연결하는 도구입니다.
+이 폴더의 61개 스킬을 연구 업무별로 소개합니다. Visualize Data, Presentations, Google Slides는 이 저장소의 설치 스크립트에 포함되지 않으며, 아래 별도 안내를 참고하세요.
 한국어 업무명과 실제 호출 이름을 함께 표시합니다.
 `$스킬명`은 실제 호출 이름이며, 요청 내용의 연구 대상과 자료를 본인 프로젝트에 맞게 바꾸세요.
 
@@ -134,11 +134,19 @@ Research와 GPT Researcher의 결과는 **문헌 조사 초안과 근거 후보*
 | 논문 자료 추출 | [paper2assets](skills/paper2assets/SKILL.md) · `$paper2assets` | 논문 자료 추출 | 이 논문 PDF에서 그림, 메타데이터와 구조화된 요약을 추출해줘. |
 | 연구 절차·관계 시각화 | [archify](skills/archify/SKILL.md) · `$archify` | 연구 절차·관계 시각화 | 이 연구의 절차와 관계를 탐색 가능한 도식으로 만들어줘. |
 | 연구 설계·자료 처리·분석·검증의 연결 | [Archify · 포함 스킬](skills/archify/SKILL.md) | 단계, 분기, 입력·출력과 관계를 탐색할 수 있는 HTML 도식 | `$archify` 이 연구의 자료 수집 → 전처리 → 분석 → 검증 흐름을 도식으로 만들고, 단계별 입력과 산출물을 보여줘. |
-| 실험값·조건별 차이·추세·불확실성 | **Visualize Data · 플러그인 포함 스킬** | 원자료에 근거한 논문용 그래프·정량 그림 | Visualize Data로 조건별 결과와 불확실성을 보여주는 그림을 만들고 축, 단위와 범례를 확인해줘. |
-| 학회 발표·랩미팅·연구 결과 보고 | **Presentations · 플러그인 포함 스킬** | 연구 질문, 방법, 결과와 의미가 이어지는 발표 슬라이드 | Presentations로 이 연구의 질문, 방법, 핵심 결과와 한계를 담은 학회 발표 자료를 만들어줘. |
-| 기존 Google Slides 발표 자료 수정 | **Google Slides · 플러그인 포함 스킬** | 제공된 발표 덱의 구조·스타일을 유지한 수정본 | Google Slides로 이 발표 덱의 스타일을 유지하면서 새로운 결과와 그림을 반영해줘. |
+| 실험값·조건별 차이·추세·불확실성 | **Visualize Data · Data 플러그인** | 원자료에 근거한 논문용 그래프·정량 그림 | Visualize Data로 조건별 결과와 불확실성을 보여주는 그림을 만들고 축, 단위와 범례를 확인해줘. |
+| 학회 발표·랩미팅·연구 결과 보고 | **Presentations · Codex 제공 스킬** | 연구 질문, 방법, 결과와 의미가 이어지는 발표 슬라이드 | Presentations로 이 연구의 질문, 방법, 핵심 결과와 한계를 담은 학회 발표 자료를 만들어줘. |
+| 기존 Google Slides 발표 자료 수정 | **Google Slides · Google Drive 플러그인** | 제공된 발표 덱의 구조·스타일을 유지한 수정본 | Google Slides로 이 발표 덱의 스타일을 유지하면서 새로운 결과와 그림을 반영해줘. |
 
-Visualize Data·Presentations·Google Slides는 Codex 플러그인으로 연결합니다.
+#### 위 세 도구는 어디서 사용하나요?
+
+이 세 항목은 위의 `python scripts/install.py`로 설치되지 않습니다. Codex의 제공 환경과 계정에 따라 사용할 수 있는 항목이나 메뉴가 다를 수 있습니다.
+
+1. **Visualize Data:** Codex의 플러그인 목록에서 **Data**를 검색해 설치합니다. Visualize Data는 Data 안에 포함된 스킬이므로 별도 이름으로 설치할 필요는 없습니다. 설치 후 데이터 파일을 제공하고 그래프를 요청하세요.
+2. **Presentations:** 이 환경에서는 Codex가 제공하는 발표 스킬입니다. 별도로 다운로드할 수 있는 플러그인 목록 항목은 확인되지 않았습니다. 먼저 Codex에 “Presentations로 발표 자료를 만들어줘”라고 요청해 보세요. 사용할 수 없다면 이 저장소의 `$ppt-master`를 대안으로 사용할 수 있습니다.
+3. **Google Slides:** 플러그인 목록에서 **Google Drive**를 검색해 설치하고, 안내에 따라 본인의 Google 계정을 연결합니다. Google Slides는 Google Drive 플러그인에 포함된 스킬입니다. 연결 후 기존 Google Slides 문서 링크를 주고 수정을 요청하세요.
+
+Codex에서 플러그인 목록을 열어 검색하세요. CLI에서는 `codex`를 실행한 다음 `/plugins`를 입력할 수 있습니다. 설치 후 필요한 계정 연결을 마치고 새 대화에서 시도하세요. 항목이 보이지 않으면 계정이나 제공 환경에 따라 지원 여부가 다를 수 있습니다. [플러그인 목록](https://chatgpt.com/plugins) · [OpenAI의 Codex 플러그인 안내](https://developers.openai.com/learn/developers-codex-plugin)
 
 
 ### 공동연구·과제 운영·인수인계
