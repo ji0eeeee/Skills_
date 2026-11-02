@@ -27,6 +27,12 @@ if (-not $SkipTools) {
         & $claude plugin install ponytail@ponytail --scope user
     }
 
+    if ((& $claude plugin list 2>$null) -match "humanize-korean@im-not-ai") { Write-Host "[skip] humanize-korean" }
+    else {
+        & $claude plugin marketplace add epoko77-ai/im-not-ai --scope user
+        & $claude plugin install humanize-korean@im-not-ai --scope user
+    }
+
     if (Has graphify) { Write-Host "[skip] $(graphify --version)" }
     else { uv tool install graphifyy; graphify install }
 
@@ -40,6 +46,8 @@ if (-not $SkipSkills) {
     $dest = "$env:USERPROFILE\.claude\skills"
     New-Item -ItemType Directory -Force $dest | Out-Null
     foreach ($dir in Get-ChildItem "$PSScriptRoot\skills" -Directory) {
+        # ponytail*·humanize*는 위 플러그인이 에이전트와 함께 제공하므로 복사하지 않음
+        if (-not $SkipTools -and $dir.Name -match '^(ponytail|humanize)') { continue }
         if (Test-Path "$dest\$($dir.Name)") { Write-Host "[skip] skill $($dir.Name)" }
         else { Copy-Item $dir.FullName "$dest\$($dir.Name)" -Recurse; Write-Host "[add]  skill $($dir.Name)" }
     }

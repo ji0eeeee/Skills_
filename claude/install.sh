@@ -29,6 +29,12 @@ if [ "$SKIP_TOOLS" -eq 0 ]; then
     claude plugin install ponytail@ponytail --scope user
   fi
 
+  if claude plugin list 2>/dev/null | grep -q "humanize-korean@im-not-ai"; then echo "[skip] humanize-korean"
+  else
+    claude plugin marketplace add epoko77-ai/im-not-ai --scope user
+    claude plugin install humanize-korean@im-not-ai --scope user
+  fi
+
   if has graphify; then echo "[skip] $(graphify --version)"
   else uv tool install graphifyy && graphify install; fi
 
@@ -41,6 +47,8 @@ if [ "$SKIP_SKILLS" -eq 0 ]; then
   mkdir -p "$DEST"
   for dir in "$HERE"/skills/*/; do
     name=$(basename "$dir")
+    # ponytail*·humanize*는 위 플러그인이 에이전트와 함께 제공하므로 복사하지 않음
+    case "$name" in ponytail*|humanize*) [ "$SKIP_TOOLS" -eq 0 ] && continue ;; esac
     if [ -e "$DEST/$name" ]; then echo "[skip] skill $name"
     else cp -R "$dir" "$DEST/$name" && echo "[add]  skill $name"; fi
   done

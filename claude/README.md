@@ -1,6 +1,6 @@
 # Claude 스킬 안내
 
-Claude(claude.ai 채팅·데스크톱·모바일 앱, Claude Code)에서 쓰는 스킬 44개입니다.
+Claude(claude.ai 채팅·데스크톱·모바일 앱, Claude Code)에서 쓰는 스킬 50개입니다.
 스킬은 Claude가 반복 작업을 같은 방식으로 하도록 적어 둔 지침 파일(`skills/<이름>/SKILL.md`)입니다. 설치하면 요청에 맞는 스킬을 Claude가 자동으로 고르고, 이름으로 직접 부를 수도 있습니다.
 
 범용 지침을 연구에 맞게 소개한 것이며, 분야별 방법·통계·실험 타당성을 자동으로 보장하지 않습니다.
@@ -48,8 +48,8 @@ sh Skills_/claude/install.sh
 스크립트가 하는 일 (이미 있는 것은 건너뜀)
 
 1. uv(파이썬 도구 설치기)를 설치합니다.
-2. Ponytail 플러그인, Graphify, Headroom을 설치합니다 ([아래 표](#사용량을-아끼는-도구)).
-3. `skills/`의 스킬 44개를 `~/.claude/skills/`에 복사합니다. 같은 이름의 폴더가 있으면 덮어쓰지 않습니다.
+2. Ponytail 플러그인, Humanize KR(im-not-ai) 플러그인, Graphify, Headroom을 설치합니다 ([아래 표](#함께-설치하는-도구)).
+3. `skills/`의 나머지 스킬을 `~/.claude/skills/`에 복사합니다. 플러그인이 주는 ponytail*·humanize*는 복사하지 않고, 같은 이름의 폴더가 있으면 덮어쓰지 않습니다.
 
 스킬만 복사하려면 `-SkipTools` / `--skip-tools`, 도구만 설치하려면 `-SkipSkills` / `--skip-skills`를 붙입니다.
 
@@ -64,6 +64,9 @@ sh Skills_/claude/install.sh
 | 발표·그림 | scientific-slides · draw-io · canvas-design | 발표 자료, 절차 도식, 포스터 |
 | 분석 코드 구현·검토 | implement · code-reviewer · karpathy-guidelines | 작게 검증된 코드 |
 | AI 답을 그대로 믿어도 될지 | discernment-nudge | 확인할 점과 한계 표시 |
+| AI가 쓴 한국어 글이 번역투·기계적임 | humanize-korean · humanize-scan | 자연스러운 한국어 윤문, AI 티 진단 |
+| 웹페이지·랜딩 페이지를 새로 만듦 | hallmark · frontend-design | 템플릿 같지 않은 디자인 |
+| 연구 소개 영상을 코드로 만듦 | remotion-best-practices | Remotion(React) 영상 프로젝트 |
 | 대화가 길어져 사용량이 빨리 줄어듦 | graphify · handoff · ponytail | 적게 읽고 짧게 답하고 새 세션으로 넘김 |
 
 ## 스킬별 의미·호출·쓰는 때
@@ -88,6 +91,17 @@ sh Skills_/claude/install.sh
 | [문서 공동 작성 절차](skills/doc-coauthoring/SKILL.md) | `/doc-coauthoring` | 연구계획서 초안을 같이 쓰자. 필요한 맥락을 먼저 묻고 절별로 다듬어줘. | 단계별로 다듬은 문서 |
 | [AI 답 점검 알림](skills/discernment-nudge/SKILL.md) | `/discernment-nudge` | (자동) 계획·분석·주장처럼 그대로 따를 답을 줄 때 확인할 점을 함께 알려줌 | 확인할 가정과 한계 |
 
+### 한국어 글 다듬기 (Humanize KR)
+
+[im-not-ai](https://github.com/epoko77-ai/im-not-ai)의 스킬입니다. Claude Code에서는 플러그인으로 설치하면 진단·윤문을 따로 맡는 서브에이전트까지 함께 들어옵니다. Claude 앱에 zip으로 올리면 단일 호출 방식으로 동작합니다.
+
+| 연구 업무 | 실제 호출 | 대표 요청 | 산출물·적용 범위 |
+|---|---|---|---|
+| [AI 티 없애기 윤문](skills/humanize-korean/SKILL.md) | `/humanize-korean` | 이 논문 초록의 번역투와 AI 같은 문체를 자연스러운 한국어로 고쳐줘. 내용과 수치는 바꾸지 마. | 윤문한 글 (분량에 따라 light·standard·heavy 경로) |
+| [짧게 부르기](skills/humanize/SKILL.md) | `/humanize` | `/humanize` 이 연구계획서 문단 다듬어줘. | humanize-korean과 같음 |
+| [AI 티 진단만](skills/humanize-scan/SKILL.md) | `/humanize-scan` | 이 글이 AI가 쓴 것처럼 보이는지 진단만 하고 고치지는 마. | 번역투·기계적 표현 목록 |
+| [다시 윤문](skills/humanize-redo/SKILL.md) | `/humanize-redo` | 방금 윤문이 아직 딱딱해. 다시 해줘. | 다시 다듬은 글 |
+
 ### 통계·데이터 분석
 
 | 연구 업무 | 실제 호출 | 대표 요청 | 산출물·적용 범위 |
@@ -108,6 +122,8 @@ sh Skills_/claude/install.sh
 | [화면 디자인 방향](skills/frontend-design/SKILL.md) | `/frontend-design` | 연구 결과 대시보드 화면을 기본 템플릿처럼 보이지 않게 디자인해줘. | UI 디자인 방향 |
 | [복잡한 웹 결과물](skills/web-artifacts-builder/SKILL.md) | `/web-artifacts-builder` | 실험 조건을 바꿔 보는 대화형 결과 페이지를 React로 만들어줘. | 여러 화면의 HTML 결과물 |
 | [Slack용 GIF](skills/slack-gif-creator/SKILL.md) | `/slack-gif-creator` | 연구실 Slack에 올릴 실험 장비 작동 GIF를 만들어줘. | Slack 규격 GIF |
+| [디자인된 웹페이지](skills/hallmark/SKILL.md) | `/hallmark` | `/hallmark` 우리 연구실 소개 페이지를 새로 만들어줘. 생성형 템플릿처럼 보이지 않게. | 디자인된 새 페이지, 자동 품질 검사(sloplint) · 기존 페이지는 `/hallmark redesign <경로>`처럼 이름을 붙일 때만 |
+| [Remotion 영상 제작](skills/remotion-best-practices/SKILL.md) | `/remotion-best-practices` | 연구 결과를 1분짜리 설명 영상으로 만드는 Remotion 프로젝트를 만들어줘. | React 코드로 만든 영상 · Node.js와 Remotion 필요 |
 
 ### 분석 코드 구현·검토
 
@@ -159,7 +175,7 @@ sh Skills_/claude/install.sh
 | [절약 효과](skills/ponytail-gain/SKILL.md) | `/ponytail-gain` | Ponytail이 얼마나 아껴 주는지 보여줘. | 측정된 절약 수치 |
 | [Ponytail 도움말](skills/ponytail-help/SKILL.md) | `/ponytail-help` | Ponytail 사용법 알려줘. | 명령·단계 요약 |
 
-## 사용량을 아끼는 도구
+## 함께 설치하는 도구
 
 Claude Code에서 쓰는 도구입니다. `install.ps1` / `install.sh`가 설치합니다.
 
@@ -167,6 +183,7 @@ Claude Code에서 쓰는 도구입니다. `install.ps1` / `install.sh`가 설치
 |---|---|---|
 | Ponytail | 가장 작은 변경으로 문제를 풀고 짧게 답하게 함 | 설치 후 자동 적용. `/ponytail-help` |
 | Graphify | 프로젝트를 지식 그래프로 만들어 Claude가 파일을 매번 다시 읽지 않게 함 | 프로젝트 폴더에서 `/graphify .` |
+| Humanize KR | 한국어 윤문 스킬 4개 + 서브에이전트 | `/humanize-korean` (플러그인: `humanize-korean@im-not-ai`) |
 | Headroom | Claude에 보내는 내용을 압축하는 중계기(프록시) | 터미널에서 `headroom wrap claude` (데스크톱 앱 세션은 아직 미지원) |
 
 ## 출처와 라이선스
@@ -174,5 +191,8 @@ Claude Code에서 쓰는 도구입니다. `install.ps1` / `install.sh`가 설치
 - ask-matt, handoff, implement 등 Matt Pocock 스킬: MIT (각 폴더의 LICENSE)
 - academy-guide, canvas-design 등 Anthropic 예제 스킬: Apache 2.0 (각 폴더의 LICENSE.txt)
 - ponytail: MIT · [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)
+- humanize-korean·humanize·humanize-scan·humanize-redo: MIT · [epoko77-ai/im-not-ai](https://github.com/epoko77-ai/im-not-ai)
+- hallmark: MIT · [Nutlope/hallmark](https://github.com/Nutlope/hallmark) (브라우저 검사는 Node 18+, puppeteer-core, Chrome 필요)
+- remotion-best-practices: [remotion-dev/skills](https://github.com/remotion-dev/skills) · Remotion 자체는 회사 규모에 따라 유료 라이선스가 필요할 수 있음 ([remotion.dev/license](https://www.remotion.dev/license))
 - graphify: [graphifyy](https://pypi.org/project/graphifyy/) 설치 시 만들어지는 스킬
 - 나머지(scientific-*, statistical-analysis, code-reviewer 등)는 공개 스킬 모음에서 받은 것으로, 원 출처의 라이선스를 따릅니다.
