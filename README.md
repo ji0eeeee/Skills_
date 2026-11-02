@@ -5,7 +5,7 @@
 
 | 쓰는 AI | 폴더 | 스킬 수 | 설치 방법 | 호출 |
 |---|---|---|---|---|
-| ChatGPT · Codex | [chatgpt/](chatgpt/README.md) | 41 | `python scripts/install.py` → `~/.agents/skills` | `$스킬명` |
+| ChatGPT · Codex | [chatgpt/](chatgpt/README.md) | 61 | `python scripts/install.py` → `~/.agents/skills` | `$스킬명` |
 | Claude 앱 (채팅) | [claude/](claude/README.md) | 50 | `claude/zips/`의 zip을 설정 → Skills에 업로드 | “스킬명 스킬로 …” |
 | Claude Code | [claude/](claude/README.md) | 50 | `claude/install.ps1` 또는 `install.sh` | `/스킬명` |
 

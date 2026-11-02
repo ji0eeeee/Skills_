@@ -1,6 +1,6 @@
 # ChatGPT(Codex) 스킬 안내
 
-ChatGPT의 코딩 에이전트 **Codex**(앱·CLI·IDE 확장)에서 쓰는 연구용 스킬 41개입니다.
+ChatGPT의 코딩 에이전트 **Codex**(앱·CLI·IDE 확장)에서 쓰는 연구용 스킬 61개입니다.
 스킬은 AI가 반복 작업을 같은 방식으로 하도록 적어 둔 지침 파일(`skills/<이름>/SKILL.md`)입니다. 설치하면 Codex가 요청에 맞는 스킬을 골라 쓰고, `$스킬명`으로 직접 부를 수도 있습니다.
 
 범용 지침을 연구에 맞게 소개한 것이며, 분야별 방법·통계·실험 타당성을 자동으로 보장하지 않습니다.
@@ -60,7 +60,7 @@ Research와 GPT Researcher의 결과는 **문헌 조사 초안과 근거 후보*
 
 ## 연구 업무별 스킬
 
-이 폴더의 41개 스킬을 연구 업무별로 소개합니다. Archify, Visualize Data, Presentations처럼 굵게 표시한 항목은 이 폴더에 없고 따로 설치하는 도구입니다.
+이 폴더의 61개 스킬을 연구 업무별로 소개합니다. Visualize Data, Presentations처럼 플러그인으로 표시한 항목은 이 폴더에 없고 따로 연결하는 도구입니다.
 한국어 업무명과 실제 호출 이름을 함께 표시합니다.
 `$스킬명`은 실제 호출 이름이며, 요청 내용의 연구 대상과 자료를 본인 프로젝트에 맞게 바꾸세요.
 
@@ -68,6 +68,7 @@ Research와 GPT Researcher의 결과는 **문헌 조사 초안과 근거 후보*
 
 | 연구 업무 | 실제 호출 | 대표 요청 | 산출물·적용 범위 |
 |---|---|---|---|
+| [연구 아이디어 구체화](skills/idea-spark/SKILL.md) | `$idea-spark` | 이 연구 방향에서 검증 가능한 연구 아이디어와 반증 계획을 제안해줘. | 연구 아이디어 구체화 |
 | [연구 단계별 도구 선택](skills/ask-matt/SKILL.md) | `$ask-matt` | 현재 연구의 진행 단계와 필요한 산출물을 확인하고, 어떤 스킬을 어떤 순서로 사용할지 제안해줘. | 연구 단계별 실행 순서 |
 | [연구 질문·설계 검토](skills/grill-me/SKILL.md) | `$grill-me` | 이 연구계획의 연구 질문, 가설, 독립·종속변수, 비교 조건, 교란요인과 검증 방법을 검토해줘. 수행된 연구와 계획 단계는 구분하고, 질문은 한 번에 하나씩 해줘. | 검토 질문과 합의된 설계 |
 | [연구 설계·결정 기록](skills/grill-with-docs/SKILL.md) | `$grill-with-docs` | 이 연구계획을 검토하면서 합의한 용어와 방법 선택의 이유를 CONTEXT.md와 설계 결정 문서에 기록해줘. | 연구 용어집·결정 기록 |
@@ -80,6 +81,14 @@ Research와 GPT Researcher의 결과는 **문헌 조사 초안과 근거 후보*
 
 | 연구 업무 | 실제 호출 | 대표 요청 | 산출물·적용 범위 |
 |---|---|---|---|
+| [연구 참신성·선행연구 검증](skills/scoop-check/SKILL.md) | `$scoop-check` | 이 연구 기여가 선행연구와 겹치는지 근거를 찾아 검증해줘. | 연구 참신성·선행연구 검증 |
+| [심층 조사 보고서](skills/research-report/SKILL.md) | `$research-report` | 심층 조사 결과를 근거가 확인된 항목 중심으로 보고서로 정리해줘. | 심층 조사 보고서 |
+| [연구 대상 심층 조사](skills/research-deep/SKILL.md) | `$research-deep` | 연구 개요의 각 대상을 독립적으로 심층 조사해줘. | 연구 대상 심층 조사 · 독립 서브에이전트 지원 필요 |
+| [연구 대상 추가](skills/research-add-items/SKILL.md) | `$research-add-items` | 기존 연구 조사 개요에 조사 대상을 추가해줘. | 연구 대상 추가 |
+| [연구 조사 항목 추가](skills/research-add-fields/SKILL.md) | `$research-add-fields` | 기존 연구 조사 개요에 비교할 필드를 추가해줘. | 연구 조사 항목 추가 |
+| [1차 자료 조사](skills/primary-source-research/SKILL.md) | `$primary-source-research` | 이 기술 질문을 공식 문서와 1차 자료로 조사하고 근거를 기록해줘. | 1차 자료 조사 |
+| [학술 논문 검색](skills/paper-search/SKILL.md) | `$paper-search` | 이 주제의 최근 논문을 검색하고 출처를 정리해줘. | 학술 논문 검색 |
+| [학술 연구·원고 검토 통합](skills/academic-research-suite/SKILL.md) | `$academic-research-suite` | 연구 질문부터 문헌 검토와 원고 수정까지 진행해줘. | 학술 연구·원고 검토 통합 |
 | [1차 자료 기반 근거 조사](skills/research/SKILL.md) | `$research` | 이 연구 주제의 핵심 주장과 방법을 논문 원문, 공식 문서와 표준으로 확인해줘. 출처의 주장과 우리의 해석을 구분하고 확인되지 않은 부분을 표시해줘. | 출처가 연결된 근거 메모 · 원본 워크플로는 백그라운드 조사 에이전트 사용 |
 | [연구 방법 학습·공유](skills/teach/SKILL.md) | `$teach` | 이 연구 방법을 대학원생이 이해할 수 있게 설명하고, 우리 분석에 적용할 전제와 한계, 이해를 확인할 질문을 포함해줘. | 방법 설명과 학습 기록 |
 
@@ -104,6 +113,7 @@ Research와 GPT Researcher의 결과는 **문헌 조사 초안과 근거 후보*
 
 | 연구 업무 | 실제 호출 | 대표 요청 | 산출물·적용 범위 |
 |---|---|---|---|
+| [논문을 연구 블로그로 변환](skills/paper2blog/SKILL.md) | `$paper2blog` | 이 논문을 중국어와 영어 연구 블로그 원고로 만들어줘. | 논문을 연구 블로그로 변환 · 중국어·영어 문서 생성 환경 필요 |
 | [발표·원고의 메시지 흐름](skills/writing-beats/SKILL.md) | `$writing-beats` | 이 연구 자료에서 문제, 방법 선택, 핵심 결과와 의미가 이어지는 메시지 흐름을 함께 구성해줘. 각 단계가 필요한 근거를 갖추는지 확인해줘. | 순서가 합의된 메시지 흐름 |
 | [논문의 핵심 주장·근거 수집](skills/writing-fragments/SKILL.md) | `$writing-fragments` | 이 연구 결과로 논문에서 주장할 수 있는 내용과 뒷받침하는 관찰을 질문하면서 수집해줘. 근거가 있는 주장과 추가 검증이 필요한 주장을 구분해줘. | 주장·근거 소재 목록 |
 | [논문 원고의 논증 구조](skills/writing-shape/SKILL.md) | `$writing-shape` | 이 결과와 소재 파일을 읽고 독자가 이해할 순서로 논문 원고를 문단별로 구성해줘. 원자료를 보존하고 각 문단의 주장과 근거를 확인해줘. | 논증이 연결된 원고 |
@@ -114,18 +124,27 @@ Research와 GPT Researcher의 결과는 **문헌 조사 초안과 근거 후보*
 
 | 전달할 내용 | 도구와 종류 | 무엇을 만들어 주는가 | 대표 요청 |
 |---|---|---|---|
-| 연구 설계·자료 처리·분석·검증의 연결 | **Archify · 독립 스킬** | 단계, 분기, 입력·출력과 관계를 탐색할 수 있는 HTML 도식 | `$archify` 이 연구의 자료 수집 → 전처리 → 분석 → 검증 흐름을 도식으로 만들고, 단계별 입력과 산출물을 보여줘. |
+| 발표 자료 영상 변환 | [pptx2video](skills/pptx2video/SKILL.md) · `$pptx2video` | 발표 자료 영상 변환 · 별도 pptx2video CLI와 음성·영상 실행 환경 필요 | 이 PowerPoint를 내레이션과 자막이 포함된 영상으로 변환해줘. |
+| 편집 가능한 발표 자료 제작 | [ppt-master](skills/ppt-master/SKILL.md) · `$ppt-master` | 편집 가능한 발표 자료 제작 | 이 연구 결과로 편집 가능한 발표 자료를 만들어줘. |
+| 논문 발표 영상 제작 | [paper2video](skills/paper2video/SKILL.md) · `$paper2video` | 논문 발표 영상 제작 · paper2assets, ppt-master, pptx2video 및 영상 제작 환경 필요 | 이 논문으로 편집 가능한 발표 자료와 내레이션 영상을 만들어줘. |
+| 포스터·발표 자료 연결 | [paper2reel](skills/paper2reel/SKILL.md) · `$paper2reel` | 포스터·발표 자료 연결 · paper2poster와 발표 자료 필요 | 포스터와 발표 프레임을 연결한 인터랙티브 뷰어를 만들어줘. |
+| 논문 포스터 제작 | [paper2poster](skills/paper2poster/SKILL.md) · `$paper2poster` | 논문 포스터 제작 · paper2assets 선행 실행과 PDF 렌더링 환경 필요 | 추출된 논문 자료로 학회 포스터를 만들어줘. |
+| 논문 자료 추출 | [paper2assets](skills/paper2assets/SKILL.md) · `$paper2assets` | 논문 자료 추출 | 이 논문 PDF에서 그림, 메타데이터와 구조화된 요약을 추출해줘. |
+| 연구 절차·관계 시각화 | [archify](skills/archify/SKILL.md) · `$archify` | 연구 절차·관계 시각화 | 이 연구의 절차와 관계를 탐색 가능한 도식으로 만들어줘. |
+| 연구 설계·자료 처리·분석·검증의 연결 | [Archify · 포함 스킬](skills/archify/SKILL.md) | 단계, 분기, 입력·출력과 관계를 탐색할 수 있는 HTML 도식 | `$archify` 이 연구의 자료 수집 → 전처리 → 분석 → 검증 흐름을 도식으로 만들고, 단계별 입력과 산출물을 보여줘. |
 | 실험값·조건별 차이·추세·불확실성 | **Visualize Data · 플러그인 포함 스킬** | 원자료에 근거한 논문용 그래프·정량 그림 | Visualize Data로 조건별 결과와 불확실성을 보여주는 그림을 만들고 축, 단위와 범례를 확인해줘. |
 | 학회 발표·랩미팅·연구 결과 보고 | **Presentations · 플러그인 포함 스킬** | 연구 질문, 방법, 결과와 의미가 이어지는 발표 슬라이드 | Presentations로 이 연구의 질문, 방법, 핵심 결과와 한계를 담은 학회 발표 자료를 만들어줘. |
 | 기존 Google Slides 발표 자료 수정 | **Google Slides · 플러그인 포함 스킬** | 제공된 발표 덱의 구조·스타일을 유지한 수정본 | Google Slides로 이 발표 덱의 스타일을 유지하면서 새로운 결과와 그림을 반영해줘. |
 
-Archify는 [원본 저장소](https://github.com/tt-a1i/archify)에서 따로 설치합니다. Visualize Data·Presentations·Google Slides는 Codex 플러그인으로 연결합니다.
+Visualize Data·Presentations·Google Slides는 Codex 플러그인으로 연결합니다.
 
 
 ### 공동연구·과제 운영·인수인계
 
 | 연구 업무 | 실제 호출 | 대표 요청 | 산출물·적용 범위 |
 |---|---|---|---|
+| [GitHub 리뷰 의견 처리](skills/gh-address-comments/SKILL.md) | `$gh-address-comments` | 현재 PR의 리뷰 의견을 확인하고 필요한 수정에 반영해줘. | GitHub 리뷰 의견 처리 · gh CLI 및 GitHub 인증 필요 |
+| [Codex 작업 인계](skills/codex-handoff/SKILL.md) | `$codex-handoff` | 현재 작업의 핵심과 다음 단계를 새 Codex 작업에 인계해줘. | Codex 작업 인계 · Codex 작업 생성 도구 필요 |
 | [Claude Code 작업 인계](skills/claude-handoff/SKILL.md) | `$claude-handoff` | 현재 분석의 목적, 완료한 작업과 남은 작업을 정리해 Claude Code의 새 백그라운드 에이전트에 인계해줘. | Claude Code 작업 인계 · Claude Code CLI와 해당 버전의 --bg 지원 필요 |
 | [연구 업무 인수인계](skills/handoff/SKILL.md) | `$handoff` | 다른 연구자가 이 분석을 이어갈 수 있도록 연구 목적, 입력 자료, 현재 결과, 결정 이유, 미해결 사항과 다음 작업을 인수인계 문서로 정리해줘. | 연구 인수인계 문서 |
 | [연구 작업 회고·절차 개선](skills/retro/SKILL.md) | `$retro` | 이번 분석 작업에서 반복된 문제와 검증 누락을 회고하고 다음 작업을 위한 환경과 지침 개선점을 제안해줘. | 작업 회고·개선안 |
@@ -138,6 +157,7 @@ Archify는 [원본 저장소](https://github.com/tt-a1i/archify)에서 따로 �
 
 | 연구 업무 | 실제 호출 | 대표 요청 | 산출물·적용 범위 |
 |---|---|---|---|
+| [Codex Git 보호 설정](skills/git-guardrails-codex/SKILL.md) | `$git-guardrails-codex` | Codex에서 위험한 Git 명령을 차단하는 훅을 설정해줘. | Codex Git 보호 설정 |
 | [Claude Code의 Git 보호 설정](skills/git-guardrails-claude-code/SKILL.md) | `$git-guardrails-claude-code` | 이 연구 프로젝트의 Claude Code 환경에 위험한 Git 명령을 차단하는 훅을 설정해줘. | Claude Code Git 보호 훅 · Claude Code 훅용. Codex 자체의 Git 차단 설정은 아님; Bash 필요 |
 | [AI Hero 교육 실습 구조](skills/scaffold-exercises/SKILL.md) | `$scaffold-exercises` | AI Hero 교육 과정 규칙을 사용하는 프로젝트에서 연구 분석 교육용 실습 문제와 해설 폴더를 만들어줘. | AI Hero 전용 실습 구조 · AI Hero 과정 구조와 pnpm ai-hero-cli 환경을 사용하는 전용 스킬 |
 | [연구 프로젝트의 작업·문서 체계](skills/setup-matt-pocock-skills/SKILL.md) | `$setup-matt-pocock-skills` | 이 연구 프로젝트에서 사용할 작업 추적 방식, 요청 분류와 개념·결정 기록 체계를 설정해줘. | 프로젝트 작업·문서 설정 |

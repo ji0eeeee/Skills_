@@ -1,0 +1,5 @@
+interface:
+  display_name: "Codex Handoff"
+  short_description: "Hand off to a new Codex task"
+policy:
+  allow_implicit_invocation: false
