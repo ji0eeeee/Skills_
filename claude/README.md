@@ -197,4 +197,3 @@ Claude Code에서 쓰는 도구입니다. `install.ps1` / `install.sh`가 설치
 - hallmark: MIT · [Nutlope/hallmark](https://github.com/Nutlope/hallmark) (브라우저 검사는 Node 18+, puppeteer-core, Chrome 필요)
 - remotion-best-practices: [remotion-dev/skills](https://github.com/remotion-dev/skills) · Remotion 자체는 회사 규모에 따라 유료 라이선스가 필요할 수 있음 ([remotion.dev/license](https://www.remotion.dev/license))
 - graphify: [graphifyy](https://pypi.org/project/graphifyy/) 설치 시 만들어지는 스킬
-- scientific-*, statistical-analysis, code-reviewer 등 나머지 스킬의 출처도 [스킬 원본 출처](../SOURCES.md)에 정리했습니다. 라이선스는 [확인 현황](../LICENSE_STATUS.md)을 참고하세요.
