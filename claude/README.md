@@ -186,14 +186,4 @@ Claude Code에서 쓰는 도구입니다. `install.ps1` / `install.sh`가 설치
 | Humanize KR | 한국어 윤문 스킬 4개 + 서브에이전트 | `/humanize-korean` (플러그인: `humanize-korean@im-not-ai`) |
 | Headroom | Claude에 보내는 내용을 압축하는 중계기(프록시) | 터미널에서 `headroom wrap claude` (데스크톱 앱 세션은 아직 미지원) |
 
-## 출처와 라이선스
 
-스킬별 원본 링크는 [스킬 원본 출처](../SOURCES.md)에 정리했습니다.
-
-- ask-matt, handoff, implement 등 Matt Pocock 스킬: MIT (각 폴더의 LICENSE)
-- academy-guide, canvas-design 등 Anthropic 예제 스킬: Apache 2.0 (각 폴더의 LICENSE.txt)
-- ponytail: MIT · [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)
-- humanize-korean·humanize·humanize-scan·humanize-redo: MIT · [epoko77-ai/im-not-ai](https://github.com/epoko77-ai/im-not-ai)
-- hallmark: MIT · [Nutlope/hallmark](https://github.com/Nutlope/hallmark) (브라우저 검사는 Node 18+, puppeteer-core, Chrome 필요)
-- remotion-best-practices: [remotion-dev/skills](https://github.com/remotion-dev/skills) · Remotion 자체는 회사 규모에 따라 유료 라이선스가 필요할 수 있음 ([remotion.dev/license](https://www.remotion.dev/license))
-- graphify: [graphifyy](https://pypi.org/project/graphifyy/) 설치 시 만들어지는 스킬
