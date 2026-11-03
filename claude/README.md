@@ -1,6 +1,6 @@
 # Claude 스킬 안내
 
-Claude(claude.ai 채팅·데스크톱·모바일 앱, Claude Code)에서 쓰는 스킬 50개입니다.
+Claude(claude.ai 채팅·데스크톱·모바일 앱, Claude Code)에서 쓰는 스킬 56개입니다. PPT Master는 용량이 커서 `chatgpt/skills/ppt-master`의 같은 파일을 함께 씁니다.
 스킬은 Claude가 반복 작업을 같은 방식으로 하도록 적어 둔 지침 파일(`skills/<이름>/SKILL.md`)입니다. 설치하면 요청에 맞는 스킬을 Claude가 자동으로 고르고, 이름으로 직접 부를 수도 있습니다.
 
 범용 지침을 연구에 맞게 소개한 것이며, 분야별 방법·통계·실험 타당성을 자동으로 보장하지 않습니다.
@@ -51,6 +51,8 @@ sh Skills_/claude/install.sh
 2. Ponytail 플러그인, Humanize KR(im-not-ai) 플러그인, Graphify, Headroom을 설치합니다 ([아래 표](#함께-설치하는-도구)).
 3. `skills/`의 나머지 스킬을 `~/.claude/skills/`에 복사합니다. 플러그인이 주는 ponytail*·humanize*는 복사하지 않고, 같은 이름의 폴더가 있으면 덮어쓰지 않습니다.
 
+PPT Master는 이 스크립트가 복사하지 않습니다. Claude Code에서 쓰려면 `chatgpt/skills/ppt-master` 폴더를 `~/.claude/skills/`에 복사합니다.
+
 스킬만 복사하려면 `-SkipTools` / `--skip-tools`, 도구만 설치하려면 `-SkipSkills` / `--skip-skills`를 붙입니다.
 
 ## 연구 단계별로 고르기
@@ -61,7 +63,7 @@ sh Skills_/claude/install.sh
 | 논문 원고를 쓰거나 고침 | scientific-writing · scientific-critical-thinking · doc-coauthoring | IMRAD 원고, 근거 수준 평가 |
 | 통계 분석·실험 설계 | statistical-analysis · senior-data-scientist | 검정 선택, 가정 확인, APA 보고 |
 | 투고 전 심사 | ai-peer-review · scientific-critical-thinking | 모델별 지적 비교, 방법론 약점 |
-| 발표·그림 | scientific-slides · draw-io · canvas-design | 발표 자료, 절차 도식, 포스터 |
+| 발표·그림 | ppt-master(.pptx) · kami(PDF) · html-ppt · scientific-slides · draw-io | 발표 자료, 절차 도식, 포스터 |
 | 분석 코드 구현·검토 | implement · code-reviewer · karpathy-guidelines | 작게 검증된 코드 |
 | AI 답을 그대로 믿어도 될지 | discernment-nudge | 확인할 점과 한계 표시 |
 | AI가 쓴 한국어 글이 번역투·기계적임 | humanize-korean · humanize-scan | 자연스러운 한국어 윤문, AI 티 진단 |
@@ -123,6 +125,13 @@ sh Skills_/claude/install.sh
 | [복잡한 웹 결과물](skills/web-artifacts-builder/SKILL.md) | `/web-artifacts-builder` | 실험 조건을 바꿔 보는 대화형 결과 페이지를 React로 만들어줘. | 여러 화면의 HTML 결과물 |
 | [Slack용 GIF](skills/slack-gif-creator/SKILL.md) | `/slack-gif-creator` | 연구실 Slack에 올릴 실험 장비 작동 GIF를 만들어줘. | Slack 규격 GIF |
 | [디자인된 웹페이지](skills/hallmark/SKILL.md) | `/hallmark` | `/hallmark` 우리 연구실 소개 페이지를 새로 만들어줘. 생성형 템플릿처럼 보이지 않게. | 디자인된 새 페이지, 자동 품질 검사(sloplint) · 기존 페이지는 `/hallmark redesign <경로>`처럼 이름을 붙일 때만 |
+| [디자인 감각 있는 웹페이지](skills/design-taste-frontend/SKILL.md) | `/design-taste-frontend` | 연구실 홈페이지를 템플릿 티 안 나게 디자인하고 스크린샷으로 고쳐가며 다듬어줘. | 아트 디렉션·화면 점검 루프 |
+| [UI 디자인 개선·점검](skills/impeccable/SKILL.md) | `/impeccable` | 이 대시보드의 위계·글꼴·색·접근성을 점검하고 다듬어줘. | UX 리뷰·폴리싱 |
+| [UI/UX 디자인 자료집](skills/ui-ux-pro-max/SKILL.md) | `/ui-ux-pro-max` | 연구 데이터 앱에 맞는 색 조합·글꼴·차트 종류를 골라줘. | 스타일·팔레트·글꼴·차트 데이터 검색 |
+| [편집 가능한 PPT 만들기](../chatgpt/skills/ppt-master/SKILL.md) | `/ppt-master` | 이 논문으로 15분 학회 발표용 PPT를 만들어줘. 연구실 템플릿(.pptx)이 있으면 그 양식을 채워줘. | 바로 고칠 수 있는 .pptx · Claude Code 전용 (용량이 커서 zip 없음) |
+| [PDF 문서·포스터 조판](skills/kami/SKILL.md) | `/kami` | 이 연구 결과를 1페이지 요약 PDF로 깔끔하게 조판해줘. | PDF (요청 시 .pptx) · 한국어 지원, Python(WeasyPrint) 필요, Windows는 WSL 권장 |
+| [HTML 발표 자료](skills/html-ppt/SKILL.md) | `/html-ppt` | 랩미팅용 10장짜리 발표를 HTML 슬라이드로 만들어줘. | 키보드로 넘기는 HTML 슬라이드, PDF 내보내기 |
+| [애니메이션 웹 발표](skills/frontend-slides/SKILL.md) | `/frontend-slides` | 이 PPT를 애니메이션 있는 웹 발표로 바꿔줘. | 단일 HTML 발표 · PPT 변환에 Python(python-pptx) 필요 |
 | [Remotion 영상 제작](skills/remotion-best-practices/SKILL.md) | `/remotion-best-practices` | 연구 결과를 1분짜리 설명 영상으로 만드는 Remotion 프로젝트를 만들어줘. | React 코드로 만든 영상 · Node.js와 Remotion 필요 |
 
 ### 분석 코드 구현·검토
